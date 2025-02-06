@@ -62,15 +62,33 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright browsers
-        run: |
-          npx playwright install --with-deps
-          npx playwright test --headless
-
       - name: Start the application
         run: |
           nohup npm run dev &
           npx wait-on http://localhost:3000 || exit 1
+
+      - name: Install dependencies for Playwright browsers
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libgtk-4.0-0 \
+            libgraphene-1.0-0 \
+            libwoff2dec1 \
+            libvpx6 \
+            libevent-2.1-7 \
+            libopus0 \
+            libgstreamer1.0-0 \
+            libflite1 \
+            libavif0.16 \
+            libharfbuzz-icu0 \
+            libsecret-1-0 \
+            libhyphen0 \
+            libmanette0.2-0 \
+            libgles2 \
+            libx264-155
+
+      - name: Install Playwright and dependencies
+        run: npx playwright install --with-deps
 
       - name: Run Playwright tests
         run: npm run test:e2e
