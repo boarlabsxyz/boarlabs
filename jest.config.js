@@ -9,10 +9,10 @@ const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
   coverageThreshold: {
     global: {
-      branches: process.env.MIN_BRANCHES_COVERAGE,
-      functions: process.env.MIN_FUNCTIONS_COVERAGE,
-      lines: process.env.MIN_LINES_COVERAGE,
-      statements: process.env.MIN_STATEMENTS_COVERAGE,
+      branches: process.env.MIN_BRANCHES_COVERAGE || 80,
+      functions: process.env.MIN_FUNCTIONS_COVERAGE || 80,
+      lines: process.env.MIN_LINES_COVERAGE || 80,
+      statements: process.env.MIN_STATEMENTS_COVERAGE || 80,
     },
   },
   collectCoverageFrom: [
@@ -21,7 +21,7 @@ const customJestConfig = {
     '!**/node_modules/**',
   ],
   coverageReporters: ['html', 'text', 'text-summary', 'cobertura'],
-  testMatch: ['**/*.test.{js,js,jsx,ts,tsx}'],
+  testMatch: ['**/*.test.{js,jsx,ts,tsx}'],
   setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
 };
 

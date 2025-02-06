@@ -24,7 +24,7 @@ export const IntroductionSection = () => {
           width={270}
           height={270}
           className={styles.earth}
-          unoptimized={true}
+          priority
         />
       </motion.div>
       <BoarLabsSchoolLogo

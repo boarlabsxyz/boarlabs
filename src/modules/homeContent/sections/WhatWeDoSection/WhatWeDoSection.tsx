@@ -32,8 +32,8 @@ export const WhatWeDoSection = () => {
         beginners can:
       </motion.p>
       <motion.div className={styles.cardsWrapper} {...motionVisibleSettings}>
-        {cardProps.map((card, index) => (
-          <WhatWeDoCard key={index} {...card} />
+        {cardProps.map((card) => (
+          <WhatWeDoCard key={card.text} {...card} />
         ))}
       </motion.div>
       <div className={styles.dontDoWrapper}>
@@ -44,8 +44,8 @@ export const WhatWeDoSection = () => {
         >
           <p>What we don’t do</p>
           <ul>
-            {dontDoList.map(({ icon, text }, index) => (
-              <li key={index}>
+            {dontDoList.map(({ icon, text }) => (
+              <li key={text}>
                 {icon} {text}
               </li>
             ))}

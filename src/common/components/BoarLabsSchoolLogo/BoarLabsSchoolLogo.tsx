@@ -30,6 +30,8 @@ export const BoarLabsSchoolLogo: FC<IBoarLabsSchoolLogoProps> = ({
   return (
     <motion.div
       className={classNameWrapper}
+      role="img"
+      aria-label="BoarLabs School Logo"
       initial={{ scale: 1 }}
       animate={{ translateY: translateYValue, scale: 0.7 }}
       transition={{ duration: 1, delay: 4, ease: 'easeInOut' }}

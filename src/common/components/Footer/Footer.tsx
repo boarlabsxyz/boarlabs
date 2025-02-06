@@ -28,11 +28,20 @@ export const Footer = () => {
         </div>
         <div className={styles.social}>
           Social Media
-          <Link href={SOCIAL_MEDIA.LINKEDIN} target="_blank">
+          <Link
+            href={SOCIAL_MEDIA.LINKEDIN}
+            target="_blank"
+            aria-label="Visit our LinkedIn page"
+            rel="noopener noreferrer"
+          >
             <LinkedinLogo />
           </Link>
         </div>
-        <button className={styles.toTopButton} onClick={scrollToTop}>
+        <button
+          className={styles.toTopButton}
+          onClick={scrollToTop}
+          aria-label="Scroll to top of page"
+        >
           <span className={styles.arrow}></span>
         </button>
       </div>
