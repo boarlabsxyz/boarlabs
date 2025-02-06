@@ -1,0 +1,38 @@
+//white
+$color-white: #fff;
+$color-white-100: #ffffffcc;
+$color-white-200: #ffffffb2;
+$color-white-900: #ffffff19;
+
+//blue
+$color-blue: #417ef3;
+$color-blue-100: #417ef37f;
+$color-blue-200: #114d8d33;
+$color-blue-300: #0f333c;
+
+//aquamarine
+$color-aquamarine: #6af4d3;
+$color-aquamarine-100: #a8f1ff7f;
+
+//green
+$color-green: #6af4d34c;
+$color-green-100: #15819633;
+$color-green-200: #17333e;
+
+//background
+$linear-background: linear-gradient(
+  124deg,
+  #4c5493 -2.95%,
+  #385c7d 4.98%,
+  #17333e 32.09%,
+  #000707 66.06%
+);
+
+// sizes screen
+$breakpoint-xs: 375px;
+$breakpoint-sm: 425px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-l: 1280px;
+$breakpoint-xl: 1440px;
+$breakpoint-four-k: 2560px;

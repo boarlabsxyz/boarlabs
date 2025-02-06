@@ -1,0 +1,31 @@
+@import '@/common/styles/variables';
+@import '@/common/styles/mixin';
+
+.wrapper {
+  @include flex-center-column();
+  @include font(20px, 500, 120%);
+
+  gap: 24px;
+  width: 306px;
+  height: 144px;
+  background-color: $color-blue-200;
+  border-radius: 8px;
+  text-transform: capitalize;
+  transition:
+    transform 0.5s ease,
+    background-color 0.5s ease;
+
+  span {
+    @include flex-center();
+
+    width: 48px;
+    height: 48px;
+    background-color: $color-white-900;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    background-color: $color-blue-300;
+    transform: scale(1.1);
+  }
+}

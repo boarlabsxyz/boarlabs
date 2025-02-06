@@ -1,0 +1,26 @@
+@import '@/common/styles/mixin';
+
+.section {
+  padding-top: 10px;
+}
+
+.textWrapper {
+  @include flex-column();
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 50px;
+
+  h2 {
+    @include font(clamp(1.563rem, 0.668rem + 3.82vw, 2.5rem), 700, 120%);
+    color: $color-white;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: -0.8px;
+  }
+
+  p {
+    @include font(20px, 400, 140%);
+    color: $color-white-100;
+    max-width: 800px;
+  }
+}
