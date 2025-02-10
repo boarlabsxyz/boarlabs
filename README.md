@@ -5,10 +5,6 @@
 - Both `node.js` and `npm` should be installed globally. You can find the instructions <https://nodejs.org/en/download/package-manager>
 - Make sure to use the LTS (Long-Term Support) version of Node.js for better stability and compatibility
 
-## Database
-
-- You need to get three files: `env.local`, `env.development`, `env.production.local` from project colleagues, place them in the root of the project directory and rename all files with a dot before the name (for example, the file `env.local` should be renamed to `.env.local`)
-
 ## Installation
 
 - run `npm ci` on the root of the project
@@ -76,10 +72,6 @@
    - Address any feedback or requested changes.
    - Once approved, merge the PR into the `main` branch.
 
-## FAQ
-
-   1. After fulfilling steps in Database section I still get error messages about environment variables
-      - Try to restart VSCode or your PC (either on Linux or Windows)
 
 ## Changelog
 

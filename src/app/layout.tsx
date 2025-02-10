@@ -7,13 +7,18 @@ import '../common/styles/globals.scss';
 export const metadata: Metadata = {
   title: 'Boarlabs',
   description: 'Boarlabs site',
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
+  metadataBase: new URL('https://boarlabs.xyz/'),
   openGraph: {
     title: 'Boarlabs',
     description: 'Boarlabs site',
     type: 'website',
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
