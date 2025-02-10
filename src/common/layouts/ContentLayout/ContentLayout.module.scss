@@ -1,0 +1,10 @@
+@import '@/common/styles/mixin';
+
+.container {
+  @include flex-column;
+
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 clamp(0.938rem, -0.053rem + 4.23vw, 3.75rem);
+}

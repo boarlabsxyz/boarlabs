@@ -1,0 +1,70 @@
+@import '@/common/styles/mixin';
+@import '@/common/styles/variables';
+
+.section {
+  @include flex-center-column();
+  margin-bottom: 200px;
+
+  h2 {
+    @include font(40px, 700, 120%);
+    margin-bottom: 16px;
+  }
+
+  p {
+    @include font(20px, 400, 140%);
+    color: $color-white-100;
+    text-align: center;
+  }
+}
+
+.cardsWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 64px 0;
+}
+
+.dontDoWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.leftBlock {
+  flex: 1;
+  background-color: $color-green-100;
+  border-radius: 8px;
+  padding: 24px 0 24px 24px;
+
+  p {
+    @include font(32px, 700, 120%);
+    text-align: left;
+    margin-bottom: 32px;
+  }
+
+  ul {
+    @include flex-column();
+    @include font(20px, 500, 120%);
+    gap: 23px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+
+.rightBlock {
+  @include flex-center-vertical();
+  @include font(clamp(1.25rem, 0.986rem + 1.13vw, 2rem), 300, 140%);
+  flex: 1;
+  padding: 24px 24px 24px 0;
+  text-transform: uppercase;
+}
