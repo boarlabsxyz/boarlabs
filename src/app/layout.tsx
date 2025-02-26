@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 import 'modern-normalize/modern-normalize.css';
 import '../common/styles/globals.scss';
@@ -24,7 +25,18 @@ export const viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <GoogleTagManager gtmId="GTM-WMFGPKWN" />
+      <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WMFGPKWN"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }
